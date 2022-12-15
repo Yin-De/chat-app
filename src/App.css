@@ -1,38 +1,456 @@
-.App {
+.register{
+  width: 100vw;
+  height: 100vh;
+  background-color: #251749;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register .form {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.register .form form{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+background-color: #263159;
+border-radius: 10px;
+padding: 30px 70px;
+color: #fff;
+}
+.register .form form input{
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  outline: none;
+  
+}
+.register .form form button{
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  width: 150px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f3ccff;
+}
+.register .form form span{
+  text-transform: uppercase;
+  font-weight: 00;
+  font-size: 15px;
+}
+.register .form form .span{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 00;
+color: #f3ccff;
+font-size: 15px;
+}
+
+.regigter h1{
+  color: white;
+}
+.avatara{
+
+  background-color: #251749;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.avatara h1{
   text-align: center;
+  color: #fff;
+  font-size: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.avatara .avatars {
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+transition: 0.5s ease-in-out;
 }
+.avatara .flex{
+display: flex;
+justify-content: center;
+align-items: center;
+border: 0.4rem solid transparent;
+padding: 0;
+height: 20vh;
+}
+.avatara .avatars img{
+width: 100px;
+margin: 10px;
+border: 0.4rem solid transparent;
+border-radius: 50%;
+padding: 0;
+}
+ .selected{
+  border: 0.4rem solid #263159;
+}
+.avatara .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.avatara button{
+background-color: #263159;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.avatara .load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50vw;
+}
+@media (max-width: 540px) {
+  .avatara h1 {
+    font-size: 21px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .avatara .avatars img{
+    width: 80px;
+    margin: 1px;
+    border: 0.4rem solid transparent;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    }
+    .avatara .flex{
+    
+      height: 12vh;
+      }
+}
+.chat-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #251749;
+}
+.chat{
+  height: 85vh;
+  width: 85vw;
+  background-color: #263159;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+@media screen and (min-width:720px) and (max-width:1080px){
+  .chat{
+    grid-template-columns: 35% 65%;
   }
 }
+.container{
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  overflow: hidden;
+  background-color: #495579;
+  height: 85vh;
+  overflow: hidden;
+}
+.container .brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-right: 2px solid #fffbeb;
+
+
+}
+.container .brand img{
+  height: 2rem;
+}
+.container .brand h3{
+  color: #fff;
+  text-transform: uppercase;
+}
+.container .contacts{
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+  gap: 0.8rem;
+  
+}
+.container .contacts::-webkit-scrollbar {
+   width: 5rem;
+    background-color: #ffffd0;
+    width: 0.1rem;
+    border-radius: 1rem;
+  }
+.container .contacts::-webkit-scrollbar-thumb {
+   width: 4rem;
+  
+  }
+.container .contacts .contact{
+  min-height: 5rem;
+  width: 90%;
+  background-color: #263159;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  transition:0.5s ease-in-out ;
+  
+}
+
+
+.container .contacts .contact .avatar img{
+  height: 3rem;
+
+}
+
+.container .contacts .contact .username h3{
+color: #fff;
+}
+.select{
+  background: red;
+  border: 5px solid #ffffd0;
+  background-color: red;
+}
+.container .current-user{
+
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #fffbeb;
+
+}
+.container .current-user .avatar img{
+  height: 4rem;
+  max-inline-size: 100%;
+
+}
+.container .current-user .username h2{
+color: #fff;
+}
+.welcome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.welcome img{
+  height: 20rem;
+}
+.welcome span{
+  color: #f3ccff;
+  padding: 2px;
+  margin-left: 9px;
+ 
+}
+.welcome h1{
+  display: flex;
+  align-items: center;
+}
+.single-container{
+display: grid;
+grid-template-rows: 10% 80% 10%;
+height: 85vh;
+background-color: #263159;
+overflow: hidden;
+
+}
+.single-container .single-chat{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 2rem;
+overflow: hidden;
+background-color:#495579 ;
+border-left: px solid #fffbeb;
+
 }
 
-.App-link {
-  color: #61dafb;
+.single-container .single-chat .user-detail{
+display: flex;
+align-items: center; 
+gap: 1rem;
+}
+.single-container .single-chat .user-detail .avatar img{
+height: 3rem;
+}
+.single-container .single-chat .user-detail .username h3{
+color: #fff;
+}
+ .logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #251749;
+  color: #fffbeb;
+ }
+.chat-input-container{
+display: grid;
+grid-template-columns:10% 90% ;
+ align-items: center;
+ padding: 0 2rem;
+
+ height: 100%;
+background-color: #495579;
+}
+.chat-input-container .btn-container{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 1rem;
+}
+.chat-input-container .btn-container .emoji{
+position: relative;
+}
+.chat-input-container .btn-container .emoji .emoji-picker-react{
+top: -350px;
+position: absolute;
+box-shadow: 0 5px 10px #f3ccff;
+}
+.chat-input-container .btn-container .emoji .emoji-picker-react .emoji-categories{
+background-color: red;
+}
+.chat-input-container .btn-container .emoji svg{
+font-size: 1.5rem;
+color: #ffff00c8 ;
+cursor: pointer;
+}
+.chat-input-container .input-container{
+  width: 100%;
+ border-radius: 2rem;
+ align-items: center;
+ gap: 2rem;
+ background-color: #251749;
+ display: flex;
+ justify-content: space-between;
+ padding: 0.4rem 0;
+}
+.chat-input-container .input-container input{
+width: 90%;
+height: 60%;
+background-color: transparent;
+color: #fff;
+border: none;
+outline: none;
+padding-left: 1rem;
+font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-input-container .input-container .submit{
+padding: 0.3rem 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #251749;
+border: none;
+border-radius: 2rem;
 }
+.chat-input-container .input-container .submit svg{
+color: #495579;
+font-size: 1.5rem;
+}
+.message{
+  display: flex;
+  padding: 0rem 1rem;
+  gap: 1rem;
+  overflow: auto;
+  flex-direction: column;
+}.message::-webkit-scrollbar-thumb{
+  width: 1px;
+}
+.message::-webkit-scrollbar{
+  width: 1px;
+}
+.message .messages{
+  display: flex;
+  align-items: center;
+}
+.message .messages .content{
+  max-width: 40%;
+  overflow-wrap: break-word;
+  padding: 15px 20px;
+  border-radius: 1.1rem;
+  background-color: #251749;
+ 
+}
+.message .messages .content p{
+margin: 0;
+color: #fffbeb;
+font-weight: 400;
+}
+
+.sended{
+
+  justify-content: flex-end;
+
+ 
+}
+  .received{
+  justify-content: flex-start;
+  
+}
+@media screen and (max-width: 600px) {
+  .chat{
+    height: 100vh;
+    width: 100vw;
+    background-color: #d1461c;
+    display: block;
+  }
+  .container{
+  
+    height: 100vh;
+  }
+  .single-container{
+ 
+    height: 100vh;
+    grid-template-rows: 10% 82% 8%;
+    }
+    .chat-input-container{
+      grid-template-columns:10% 90% ;
+      padding: 0 1rem;
+
+      
+      }
+      .chat-input-container .btn-container .emoji .emoji-picker-react{
+        top: -350px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        box-shadow: 0 5px 10px #f3ccff;
+        background-color: transparent;
+        }
+        .register .form form span{
+          font-size: 14px;
+        }
+        .register .form form span .span{
+          font-size: 14px;
+        }
+  }
+ 
